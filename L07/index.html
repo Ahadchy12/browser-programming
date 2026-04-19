@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lecture 05 - Portfolio with Skills, Projects & API Integration</title>
+    <title>Portfolio - Abhul Ahad Chy</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -18,9 +18,20 @@
                 <p>Role: Aspiring Coder | Degree: Computer Science | Location: Finland</p>
                 <p>Bio: Exploring developing Websites.</p>
             </div>
-            <!-- Theme Toggle Button (Requirement 3) -->
+            <!-- Theme Toggle Button -->
             <button id="themeToggle" class="theme-btn">Toggle Theme</button>
         </div>
+        
+        <!-- Navigation Menu (NEW) -->
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#main">Home</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#api-demo">API Demo</a></li>
+                <li><a href="weather.html" class="weather-link">🌤️ Weather App</a></li>
+            </ul>
+        </nav>
     </header>
 
     <!-- Main content area -->
@@ -32,8 +43,8 @@
             <img src="https://via.placeholder.com/800x400?text=Portfolio+Showcase" alt="Portfolio showcase image" class="responsive-img">
         </section>
 
-        <!-- SKILLS SECTION (Requirement 1) -->
-        <section class="skills-section">
+        <!-- SKILLS SECTION -->
+        <section id="skills" class="skills-section">
             <h2>💻 Skills</h2>
             <div class="skills-container">
                 <div class="skill-card">
@@ -69,8 +80,8 @@
             </div>
         </section>
 
-        <!-- PROJECTS SECTION (Requirement 2) -->
-        <section class="projects-section">
+        <!-- PROJECTS SECTION -->
+        <section id="projects" class="projects-section">
             <h2>🚀 Projects</h2>
             <div class="projects-container">
                 <div class="project-card">
@@ -84,15 +95,15 @@
                     <a href="https://github.com/Ahadchy12/portfolio" class="project-link" target="_blank">View on GitHub →</a>
                 </div>
                 <div class="project-card">
-                    <h3>Weather Forecast App</h3>
-                    <p>A JavaScript weather application that fetches real-time weather data from OpenWeatherMap API and displays 5-day forecast with dynamic icons.</p>
-                    <a href="https://github.com/Ahadchy12/weather-app" class="project-link" target="_blank">View on GitHub →</a>
+                    <h3>Weather App</h3>
+                    <p>A weather application that fetches real-time weather data from Open-Meteo API. Check weather in multiple Finnish cities with one click.</p>
+                    <a href="weather.html" class="project-link">Try Weather App →</a>
                 </div>
             </div>
         </section>
 
-        <!-- EXTERNAL DATA DEMO SECTION (NEW API Integration) -->
-        <section class="api-section">
+        <!-- EXTERNAL DATA DEMO SECTION -->
+        <section id="api-demo" class="api-section">
             <h2>📡 External Data Demo</h2>
             <div class="api-container">
                 <p>Click the button below to fetch user data from JSONPlaceholder API:</p>
@@ -124,7 +135,7 @@
             <li><a href="https://linkedin.com/in/abul-ahad-chy" target="_blank">LinkedIn</a></li>
             <li><a href="https://github.com/Ahadchy12" target="_blank">GitHub</a></li>
         </ul>
-        <!-- Last updated text (Requirement 5) - populated by JavaScript -->
+        <!-- Last updated text -->
         <p id="lastUpdated" class="last-updated"></p>
     </footer>
 
