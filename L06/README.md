@@ -1,5 +1,5 @@
 
-# Lecture 05 – Portfolio with Skills, Projects, Theme Toggle & API Integration
+# Lecture 06 – Portfolio with Skills, Projects, Theme Toggle & API Integration
 
 ## What I implemented this lecture
 
