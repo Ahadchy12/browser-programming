@@ -1,374 +1,178 @@
 /* ============================================
-   Lecture 05 - Portfolio with Skills, Projects & API Integration
-   Base styles + Dark mode support with localStorage
+   Navigation Menu Styles (for both pages)
    ============================================ */
-
-/* CSS Variables for Light Mode (Default) */
-:root {
-    --bg-color: #ffffff;
-    --text-color: #333333;
-    --header-bg: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    --card-bg: #f9f9f9;
-    --skill-card-bg: #ffffff;
-    --project-card-bg: #ffffff;
-    --border-color: #e0e0e0;
-    --button-bg: #667eea;
-    --button-hover: #764ba2;
-    --shadow: 0 2px 8px rgba(0,0,0,0.1);
-    --skill-icon-bg: #e3f2fd;
-    --link-color: #667eea;
-    --api-bg: #f0f7ff;
+.main-nav {
+    margin-top: 1.5rem;
+    padding: 0.5rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-/* Dark Mode Variables - applied via .dark class on body */
-body.dark {
-    --bg-color: #1a1a2e;
-    --text-color: #e0e0e0;
-    --header-bg: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-    --card-bg: #16213e;
-    --skill-card-bg: #0f3460;
-    --project-card-bg: #0f3460;
-    --border-color: #2c3e50;
-    --button-bg: #e94560;
-    --button-hover: #c73d54;
-    --shadow: 0 2px 8px rgba(0,0,0,0.3);
-    --skill-icon-bg: #16213e;
-    --link-color: #e94560;
-    --api-bg: #0a0e27;
-}
-
-/* Base Body Styles */
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
     margin: 0;
     padding: 0;
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-/* Header Styles */
-header {
-    background: var(--header-bg);
-    padding: 2rem;
-    transition: background 0.3s ease;
-    box-shadow: var(--shadow);
-}
-
-.header-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     flex-wrap: wrap;
-    gap: 1rem;
 }
 
-.header-text {
-    flex: 1;
+.main-nav li {
+    margin: 0;
 }
 
-header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
+.main-nav a {
     color: white;
-}
-
-header p {
-    color: rgba(255, 255, 255, 0.9);
-    margin: 0.25rem 0;
-}
-
-/* Footer Styles */
-footer {
-    background: var(--header-bg);
-    padding: 2rem;
-    text-align: center;
-    transition: background 0.3s ease;
-    color: white;
-}
-
-footer h2 {
-    color: white;
-    border-bottom-color: rgba(255, 255, 255, 0.3);
-}
-
-footer .social-nav a {
-    color: white;
-}
-
-footer .social-nav a:hover {
-    color: #ffd700;
-}
-
-/* Main content area */
-#main {
-    padding: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* Typography */
-h2 {
-    font-size: 2rem;
-    color: var(--text-color);
-    border-bottom: 3px solid var(--button-bg);
-    padding-bottom: 0.5rem;
-    display: inline-block;
-    margin-bottom: 1.5rem;
-}
-
-h3 {
-    font-size: 1.3rem;
-    color: var(--text-color);
-    margin: 0.5rem 0;
-}
-
-p {
-    margin-bottom: 1rem;
-}
-
-/* Section spacing */
-section {
-    margin-bottom: 3rem;
-    padding: 1rem;
-}
-
-/* Responsive images */
-.responsive-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 1rem 0;
-    border-radius: 8px;
-}
-
-/* Navigation styling */
-.social-nav {
-    list-style: none;
-    padding-left: 0;
-    margin: 1rem 0;
-}
-
-.social-nav li {
-    display: inline-block;
-    margin-right: 1.5rem;
-}
-
-.social-nav a {
     text-decoration: none;
-    color: var(--link-color);
     font-weight: 500;
-    transition: color 0.3s ease;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: all 0.3s ease;
 }
 
-.social-nav a:hover {
-    color: var(--button-hover);
-    text-decoration: underline;
+.main-nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
 }
 
-/* Skip link */
-.skip-link {
-    position: absolute;
-    top: -40px;
-    left: 0;
-    background: #2c3e50;
-    color: white;
-    padding: 8px;
-    text-decoration: none;
-    z-index: 100;
+.weather-link {
+    background-color: #ff9800;
+    color: white !important;
 }
 
-.skip-link:focus {
-    top: 0;
+.weather-link:hover {
+    background-color: #f57c00 !important;
 }
 
 /* ============================================
-   Theme Toggle Button (Requirement 3)
+   Weather Page Specific Styles
    ============================================ */
-.theme-btn {
-    background-color: rgba(255, 255, 255, 0.2);
+.weather-main {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 60vh;
+}
+
+.weather-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.weather-container h2 {
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.weather-description {
+    text-align: center;
+    color: var(--text-color);
+    margin-bottom: 2rem;
+}
+
+/* City Buttons */
+.city-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+.city-btn {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
-    border: 2px solid white;
+    border: none;
     padding: 12px 24px;
     border-radius: 25px;
     cursor: pointer;
     font-size: 1rem;
     font-weight: bold;
     transition: all 0.3s ease;
-    backdrop-filter: blur(10px);
+    box-shadow: var(--shadow);
 }
 
-.theme-btn:hover {
-    background-color: rgba(255, 255, 255, 0.3);
-    transform: scale(1.05);
+.city-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
-body.dark .theme-btn {
-    background-color: rgba(0, 0, 0, 0.3);
-    border-color: #e94560;
+.city-btn:active {
+    transform: translateY(0);
 }
 
-body.dark .theme-btn:hover {
-    background-color: rgba(233, 69, 96, 0.3);
+body.dark .city-btn {
+    background: linear-gradient(135deg, #e94560 0%, #c73d54 100%);
 }
 
-/* ============================================
-   Skills Section - Card Layout (Requirement 1)
-   ============================================ */
-.skills-section {
+/* Weather Card */
+.weather-card {
     background-color: var(--card-bg);
     border-radius: 15px;
     padding: 2rem;
-    transition: background-color 0.3s ease;
-}
-
-.skills-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 1.5rem;
-    margin-top: 1.5rem;
-}
-
-.skill-card {
-    background-color: var(--skill-card-bg);
-    border-radius: 12px;
-    padding: 1.5rem;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 2rem;
     box-shadow: var(--shadow);
     border: 1px solid var(--border-color);
-    cursor: pointer;
-}
-
-.skill-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
-}
-
-.skill-icon {
-    font-size: 3rem;
-    margin-bottom: 0.5rem;
-}
-
-.skill-card h3 {
-    margin: 0.5rem 0;
-    color: var(--button-bg);
-}
-
-.skill-card p {
-    font-size: 0.9rem;
-    margin: 0;
-    opacity: 0.9;
-}
-
-/* ============================================
-   Projects Section - Card Layout (Requirement 2)
-   ============================================ */
-.projects-section {
-    background-color: var(--card-bg);
-    border-radius: 15px;
-    padding: 2rem;
-    transition: background-color 0.3s ease;
-}
-
-.projects-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1.5rem;
-    margin-top: 1.5rem;
-}
-
-.project-card {
-    background-color: var(--project-card-bg);
-    border-radius: 12px;
-    padding: 1.5rem;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: var(--shadow);
-    border: 1px solid var(--border-color);
-}
-
-.project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
-}
-
-.project-card h3 {
-    color: var(--button-bg);
-    margin-bottom: 0.5rem;
-}
-
-.project-card p {
-    margin: 0.5rem 0 1rem;
-    line-height: 1.5;
-}
-
-.project-link {
-    display: inline-block;
-    color: var(--link-color);
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-.project-link:hover {
-    color: var(--button-hover);
-    text-decoration: underline;
-}
-
-/* ============================================
-   API Section Styles (NEW)
-   ============================================ */
-.api-section {
-    background-color: var(--card-bg);
-    border-radius: 15px;
-    padding: 2rem;
-    transition: background-color 0.3s ease;
-}
-
-.api-container {
-    text-align: center;
-}
-
-.api-btn {
-    background-color: var(--button-bg);
-    color: white;
-    border: none;
-    padding: 12px 30px;
-    border-radius: 25px;
-    cursor: pointer;
-    font-size: 1.1rem;
-    font-weight: bold;
     transition: all 0.3s ease;
-    margin: 1rem 0;
 }
 
-.api-btn:hover {
-    background-color: var(--button-hover);
-    transform: scale(1.05);
+.weather-card h3 {
+    text-align: center;
+    color: var(--button-bg);
+    margin-bottom: 1.5rem;
 }
 
-.api-btn:active {
-    transform: scale(0.98);
+.weather-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
-.api-data-display {
+.weather-field {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+    border-bottom: 1px solid var(--border-color);
+    font-size: 1.1rem;
+}
+
+.weather-field strong {
+    color: var(--button-bg);
+    min-width: 120px;
+}
+
+/* Console Output Box */
+.console-output {
     margin-top: 2rem;
-    padding: 1.5rem;
+}
+
+.console-output h3 {
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+.output-box {
     background-color: var(--api-bg);
-    border-radius: 12px;
+    color: #0f0;
+    padding: 1rem;
+    border-radius: 8px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.85rem;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    max-height: 300px;
+    overflow-y: auto;
     border: 1px solid var(--border-color);
-    text-align: left;
-    min-height: 200px;
-    transition: background-color 0.3s ease;
 }
 
-.user-card {
-    animation: fadeIn 0.5s ease-in;
+body.dark .output-box {
+    background-color: #0a0e27;
+    color: #4afd4a;
 }
 
+/* Animation for weather updates */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -380,95 +184,55 @@ body.dark .theme-btn:hover {
     }
 }
 
-.user-card h3 {
-    color: var(--button-bg);
-    margin-bottom: 1rem;
-    font-size: 1.5rem;
-}
-
-.user-info {
-    margin: 1rem 0;
-    padding: 0.5rem;
-}
-
-.user-info p {
-    margin: 0.8rem 0;
-    font-size: 1.1rem;
-}
-
-.user-info strong {
-    color: var(--button-bg);
-    min-width: 120px;
-    display: inline-block;
-}
-
-.loading-message {
-    text-align: center;
-    padding: 2rem;
-    font-size: 1.2rem;
-    color: var(--button-bg);
-}
-
-.error-message {
-    text-align: center;
-    padding: 2rem;
-    background-color: #ff6b6b20;
-    border-left: 4px solid #ff6b6b;
-    border-radius: 8px;
-    color: #ff6b6b;
-}
-
-/* Last updated styling */
-.last-updated {
-    margin-top: 1.5rem;
-    padding-top: 1rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
-    font-size: 0.85rem;
-    text-align: center;
-    font-style: italic;
-    color: rgba(255, 255, 255, 0.8);
-}
-
-/* Responsive Design */
+/* Responsive Design for Weather Page */
 @media (max-width: 768px) {
-    #main {
+    .weather-main {
         padding: 1rem;
     }
     
-    .header-content {
+    .weather-container {
+        padding: 0;
+    }
+    
+    .city-buttons {
+        gap: 0.5rem;
+    }
+    
+    .city-btn {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+    
+    .weather-field {
         flex-direction: column;
-        text-align: center;
+        align-items: flex-start;
+        gap: 0.5rem;
     }
     
-    header h1 {
-        font-size: 1.8rem;
+    .weather-field strong {
+        min-width: auto;
     }
     
-    h2 {
-        font-size: 1.5rem;
-    }
-    
-    .theme-btn {
-        width: 100%;
-        max-width: 200px;
-    }
-    
-    .skills-container {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    .main-nav ul {
         gap: 1rem;
     }
     
-    .projects-container {
-        grid-template-columns: 1fr;
+    .main-nav a {
+        padding: 0.3rem 0.8rem;
+        font-size: 0.9rem;
     }
-    
-    .skills-section, .projects-section, .api-section {
-        padding: 1rem;
+}
+
+/* Loading state animation */
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
     }
-    
-    .user-info strong {
-        min-width: 100px;
-        display: block;
-        margin-bottom: 0.25rem;
+    50% {
+        opacity: 0.5;
     }
+}
+
+.loading {
+    animation: pulse 1s ease-in-out infinite;
 }
