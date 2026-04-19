@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecture 03 - CSS Basics Portfolio</title>
+    <!-- External CSS - Step 1: Link CSS file -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Skip to content link for accessibility -->
+    <a href="#main" class="skip-link">Skip to content</a>
+
+    <!-- Header: semantic element with background and padding (Step 5) -->
+    <header>
+        <h1>Abhul Ahad Chy</h1>
+        <p>Role: Aspiring Coder | Degree: Computer Science | Location: Finland</p>
+        <p>Bio: Exploring developing Websites.</p>
+    </header>
+
+    <!-- Main content area with id="main" for skip link and CSS layout constraints (Step 8) -->
+    <main id="main">
+        <!-- Section: Portfolio / Works -->
+        <section>
+            <h2>Portfolio / Works</h2>
+            <p>Check out my code here: <a href="https://github.com/Ahadchy12">GitHub Profile</a></p>
+            <!-- Responsive image example (Step 7: max-width 100%, height auto) -->
+            <!-- Added a representative image to demonstrate responsive image behavior -->
+            <img src="https://via.placeholder.com/800x400?text=Responsive+Demo+Image" alt="Responsive portfolio demo image" class="responsive-img">
+        </section>
+
+        <!-- Section: Areas of Interest -->
+        <section>
+            <h2>Areas of Interest</h2>
+            <ul>
+                <li><strong>Technology:</strong> Web development and embedded devices</li>
+                <li><strong>Studies:</strong> Internet of things</li>
+                <li><strong>Hobbies:</strong> Playing games, Making food</li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- Footer: Contact & Socials (Step 5: background + padding) -->
+    <footer>
+        <h2>Contact & Socials</h2>
+        <p>Connect with me on:</p>
+        <!-- Navigation list: Step 6 - remove bullets, horizontal layout, remove underline -->
+        <ul class="social-nav">
+            <li><a href="https://linkedin.com">LinkedIn</a></li>
+            <li><a href="https://github.com/Ahadchy12">GitHub</a></li>
+        </ul>
+    </footer>
+</body>
+</html>
