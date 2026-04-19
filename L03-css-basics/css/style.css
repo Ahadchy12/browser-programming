@@ -1,1 +1,150 @@
+/* ============================================
+   Lecture 03 - CSS Basics
+   External stylesheet for portfolio
+   ============================================ */
 
+/* --------------------------------------------
+   Step 2: CSS Selectors (5+ different types)
+   -------------------------------------------- */
+
+/* 1. Element selector - applies to whole page body */
+body {
+    /* Step 3: Typography - readable font & line height */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* 2. Group selector - header and footer share same styling */
+header, footer {
+    /* Step 5: Header & Footer styling - subtle background and padding */
+    background-color: #f4f4f4;
+    padding: 1.5rem 2rem;
+}
+
+/* 3. Descendant selector - style h1 inside header */
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+}
+
+/* 4. ID selector - styles the main content area */
+#main {
+    /* Step 4: Spacing - add padding to main content area */
+    padding: 2rem;
+    
+    /* Step 8: Basic layout constraint - limit width and center */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* 5. Class selector - styles the responsive image */
+.responsive-img {
+    /* Step 7: Responsive images - must not overflow */
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1rem 0;
+    border-radius: 8px;
+}
+
+/* 6. Pseudo-class - hover effect on all links */
+a:hover {
+    color: #e74c3c;
+    text-decoration: underline;
+}
+
+/* --------------------------------------------
+   Step 3: Typography (additional styles)
+   -------------------------------------------- */
+
+/* Different font size for h2 */
+h2 {
+    font-size: 1.8rem;
+    color: #34495e;
+    border-bottom: 2px solid #ecf0f1;
+    padding-bottom: 0.5rem;
+}
+
+/* Paragraph styling for better readability */
+p {
+    margin-bottom: 1rem;
+}
+
+/* Step 4: Spacing - vertical spacing between content blocks */
+section {
+    margin-bottom: 2.5rem;
+    padding: 1rem;
+}
+
+/* Additional spacing: using both margin and padding on sections */
+section:last-of-type {
+    margin-bottom: 0;
+}
+
+/* --------------------------------------------
+   Step 6: Navigation styling (list → navigation)
+   -------------------------------------------- */
+
+/* Remove bullets from the navigation list */
+.social-nav {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+/* Make nav items horizontal */
+.social-nav li {
+    display: inline-block;
+    margin-right: 1.5rem;
+}
+
+/* Remove underline from nav links */
+.social-nav a {
+    text-decoration: none;
+    color: #3498db;
+    font-weight: 500;
+}
+
+/* Keep pseudo-class for nav links as well */
+.social-nav a:hover {
+    color: #e74c3c;
+    text-decoration: underline;
+}
+
+/* --------------------------------------------
+   Additional styling for skip link (accessibility)
+   -------------------------------------------- */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #2c3e50;
+    color: white;
+    padding: 8px;
+    text-decoration: none;
+    z-index: 100;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+/* --------------------------------------------
+   Small responsive adjustments
+   -------------------------------------------- */
+@media (max-width: 768px) {
+    #main {
+        padding: 1rem;
+    }
+    
+    header h1 {
+        font-size: 1.8rem;
+    }
+    
+    h2 {
+        font-size: 1.4rem;
+    }
+}
