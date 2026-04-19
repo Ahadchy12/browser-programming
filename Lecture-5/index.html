@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecture 05 - Portfolio with Skills, Projects & Theme Toggle</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Skip to content link for accessibility -->
+    <a href="#main" class="skip-link">Skip to content</a>
+
+    <!-- Header section -->
+    <header>
+        <div class="header-content">
+            <div class="header-text">
+                <h1>Abhul Ahad Chy</h1>
+                <p>Role: Aspiring Coder | Degree: Computer Science | Location: Finland</p>
+                <p>Bio: Exploring developing Websites.</p>
+            </div>
+            <!-- Theme Toggle Button (Requirement 3) -->
+            <button id="themeToggle" class="theme-btn">Toggle Theme</button>
+        </div>
+    </header>
+
+    <!-- Main content area -->
+    <main id="main">
+        <!-- Portfolio / Works Section -->
+        <section>
+            <h2>Portfolio / Works</h2>
+            <p>Check out my code here: <a href="https://github.com/Ahadchy12">GitHub Profile</a></p>
+            <img src="https://via.placeholder.com/800x400?text=Portfolio+Showcase" alt="Portfolio showcase image" class="responsive-img">
+        </section>
+
+        <!-- SKILLS SECTION (Requirement 1) -->
+        <section class="skills-section">
+            <h2>💻 Skills</h2>
+            <div class="skills-container">
+                <div class="skill-card">
+                    <div class="skill-icon">🌐</div>
+                    <h3>HTML5</h3>
+                    <p>Semantic HTML, Accessibility, SEO</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🎨</div>
+                    <h3>CSS3</h3>
+                    <p>Flexbox, Grid, Animations, Responsive Design</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">⚡</div>
+                    <h3>JavaScript</h3>
+                    <p>ES6+, DOM Manipulation, Async/Await</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🐍</div>
+                    <h3>Python</h3>
+                    <p>Data Structures, Automation, Scripting</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">📡</div>
+                    <h3>IoT</h3>
+                    <p>Arduino, Sensors, MQTT Protocol</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🔌</div>
+                    <h3>LTspice</h3>
+                    <p>Circuit Simulation, Analog Design</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECTS SECTION (Requirement 2) -->
+        <section class="projects-section">
+            <h2>🚀 Projects</h2>
+            <div class="projects-container">
+                <div class="project-card">
+                    <h3>Smart Home IoT Dashboard</h3>
+                    <p>A real-time IoT monitoring system that tracks temperature, humidity, and motion sensors using Arduino and MQTT protocol with a responsive web dashboard.</p>
+                    <a href="https://github.com/Ahadchy12/smart-home-iot" class="project-link" target="_blank">View on GitHub →</a>
+                </div>
+                <div class="project-card">
+                    <h3>Personal Portfolio Website</h3>
+                    <p>A fully responsive portfolio website with dark/light mode toggle, localStorage persistence, and dynamic content loading using vanilla JavaScript.</p>
+                    <a href="https://github.com/Ahadchy12/portfolio" class="project-link" target="_blank">View on GitHub →</a>
+                </div>
+                <div class="project-card">
+                    <h3>Weather Forecast App</h3>
+                    <p>A JavaScript weather application that fetches real-time weather data from OpenWeatherMap API and displays 5-day forecast with dynamic icons.</p>
+                    <a href="https://github.com/Ahadchy12/weather-app" class="project-link" target="_blank">View on GitHub →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Areas of Interest Section -->
+        <section>
+            <h2>Areas of Interest</h2>
+            <ul>
+                <li><strong>Technology:</strong> Web development and embedded devices</li>
+                <li><strong>Studies:</strong> Internet of things</li>
+                <li><strong>Hobbies:</strong> Playing games, Making food</li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- Footer with social links and last updated -->
+    <footer>
+        <h2>Contact & Socials</h2>
+        <p>Connect with me on:</p>
+        <ul class="social-nav">
+            <li><a href="https://linkedin.com/in/abul-ahad-chy" target="_blank">LinkedIn</a></li>
+            <li><a href="https://github.com/Ahadchy12" target="_blank">GitHub</a></li>
+        </ul>
+        <!-- Last updated text (Requirement 5) - populated by JavaScript -->
+        <p id="lastUpdated" class="last-updated"></p>
+    </footer>
+
+    <!-- JavaScript linked at the end of body -->
+    <script src="script.js"></script>
+</body>
+</html>
