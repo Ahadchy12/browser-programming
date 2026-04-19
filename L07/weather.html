@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App - Abhul Ahad Chy</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Skip to content link -->
+    <a href="#weatherMain" class="skip-link">Skip to content</a>
+
+    <!-- Header section with same style as portfolio -->
+    <header>
+        <div class="header-content">
+            <div class="header-text">
+                <h1>🌤️ Weather App</h1>
+                <p>Real-time weather data from Open-Meteo API</p>
+            </div>
+            <!-- Theme Toggle Button (shared with portfolio) -->
+            <button id="themeToggle" class="theme-btn">Toggle Theme</button>
+        </div>
+        
+        <!-- Navigation Menu -->
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">🏠 Back to Portfolio</a></li>
+                <li><a href="index.html#skills">Skills</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Weather App Content -->
+    <main id="weatherMain" class="weather-main">
+        <div class="weather-container">
+            <h2>Current Weather Information</h2>
+            <p class="weather-description">Select a city to see real-time weather data:</p>
+            
+            <!-- City Buttons -->
+            <div class="city-buttons">
+                <button id="btnKuopio" class="city-btn">🇫🇮 Kuopio</button>
+                <button id="btnHelsinki" class="city-btn">🇫🇮 Helsinki</button>
+                <button id="btnTampere" class="city-btn">🇫🇮 Tampere</button>
+                <button id="btnOulu" class="city-btn">🇫🇮 Oulu</button>
+                <button id="btnTurku" class="city-btn">🇫🇮 Turku</button>
+            </div>
+            
+            <!-- Weather Display Box -->
+            <div class="weather-card">
+                <h3>📍 Current Weather</h3>
+                <div class="weather-info">
+                    <div class="weather-field">
+                        <strong>🌆 City:</strong>
+                        <span id="city">-</span>
+                    </div>
+                    <div class="weather-field">
+                        <strong>🌡️ Temperature:</strong>
+                        <span id="temperature">-</span>
+                    </div>
+                    <div class="weather-field">
+                        <strong>💨 Wind Speed:</strong>
+                        <span id="wind">-</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Console Output Display (for debugging/logs) -->
+            <div class="console-output">
+                <h3>📋 API Response Log</h3>
+                <pre id="output" class="output-box">Ready to fetch weather data...</pre>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer with same style -->
+    <footer>
+        <p>Weather data provided by <a href="https://open-meteo.com" target="_blank" style="color: white;">Open-Meteo API</a></p>
+        <p>&copy; 2024 Abhul Ahad Chy - Weather App</p>
+        <p id="lastUpdated" class="last-updated"></p>
+    </footer>
+
+    <!-- Weather App JavaScript -->
+    <script src="weather.js"></script>
+    <!-- Theme toggle script (shared functionality) -->
+    <script src="script.js"></script>
+</body>
+</html>
